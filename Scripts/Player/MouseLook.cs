@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿// Adapted from:
+// First Person Controller
+// Acacia Developer
+// 1/4/2021
+// https://youtu.be/n-KX8AeGK7E
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;

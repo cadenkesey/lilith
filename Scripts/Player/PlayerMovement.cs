@@ -1,4 +1,10 @@
-﻿using System;
+﻿// Adapted from:
+// First Person Movement in Unity
+// Brackeys
+// 1/4/2021
+// https://youtu.be/_QajrabyTJc
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
