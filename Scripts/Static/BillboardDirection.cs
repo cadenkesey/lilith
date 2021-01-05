@@ -1,3 +1,9 @@
+﻿// Adapted from:
+// Enemy Multiway Sprite Billboard
+// Fabryka Tworcow Gier
+// 1/4/2021
+// https://youtu.be/GG_lLKzBE1k
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
