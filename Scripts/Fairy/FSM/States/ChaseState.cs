@@ -70,7 +70,12 @@ public class ChaseState : AbstractState
                 else
                 {
                     FairyCharacter.transform.position += nextMovement;
-                    FairyCharacter.transform.rotation = Quaternion.LookRotation(new Vector3(nextMovement.x, 0, nextMovement.z));
+
+                    Vector3 nextLook = new Vector3(nextMovement.x, 0, nextMovement.z);
+                    if (!nextLook.Equals(new Vector3(0,0,0)))
+                    {
+                        FairyCharacter.transform.rotation = Quaternion.LookRotation(nextLook);
+                    }
                 }
             }
 
