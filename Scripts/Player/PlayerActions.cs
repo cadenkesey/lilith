@@ -36,6 +36,7 @@ public class PlayerActions : MonoBehaviour
         _controls = new Inputs();
         _controls.Player.Use.started += ctx => useAction();
         _controls.Player.Shoot.started += ctx => shootAction();
+        _controls.Player.Quit.started += ctx => quitAction();
     }
 
     private void Start()
@@ -108,7 +109,7 @@ public class PlayerActions : MonoBehaviour
             }
 
             RaycastHit shootHit;
-            if (Physics.Raycast(_playerCamera.transform.position, _playerCamera.transform.forward, out shootHit, _useRange, _layerMask, QueryTriggerInteraction.Ignore))
+            if (Physics.Raycast(_playerCamera.transform.position, _playerCamera.transform.forward, out shootHit, _shootRange, _layerMask, QueryTriggerInteraction.Ignore))
             {
                 Transform target = shootHit.transform;
 
@@ -133,6 +134,14 @@ public class PlayerActions : MonoBehaviour
 
             StartCoroutine(StopShoot(_shootSpeed));
         }
+    }
+
+    /// <summary>
+    /// Called when the player presses the quit key
+    /// </summary>
+    private void quitAction()
+    {
+        Application.Quit();
     }
 
     /// <summary>
